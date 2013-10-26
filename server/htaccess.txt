@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule api/(.*)$ api/BusPhone.php?request=$1 [QSA,NC,L]
+RewriteRule api/validate_ticket/(.*)$ api/BusPhone.php?request=validate_ticket&ticket_id=$1 [QSA,NC,L]
+</IfModule>
