@@ -6,7 +6,8 @@ class BusPhoneConnection
 	protected $connection = null; 
 
 	public function __construct() {
-        $connection = mysqli_connect("example.com", "peter", "abc123", "my_db");
+        // https://mysqladmin.amen.pt/phpmyadmin/?language=por
+        $connection = mysqli_connect("hostingmysql116.amen.pt", "BM36_cmov", "cmov_feup", "plusquare_pt_bus_phone");
     }
 
     //Check for connection error

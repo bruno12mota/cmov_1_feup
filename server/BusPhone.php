@@ -27,8 +27,11 @@ class BusPhoneApi extends API
         		return $DB_connection.get_error();
         	}
 
-
+        	//Requested ticket it
         	$ticket_id = $_REQUEST['ticket_id'];
+
+        	//Check if it exists in database available
+        	
 
         	//Close database connection
         	$DB_connection.close();
