@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule login/(.*)/(.*) /bus_tickets/BusPhone.php?request=login&email=$1&pass=$2 [QSA,NC,L]
+RewriteRule register /bus_tickets/BusPhone.php?request=register [QSA,NC,L]
+RewriteRule validate_ticket/(.*)$ /bus_tickets/BusPhone.php?request=validate_ticket&ticket_id=$1 [QSA,NC,L]
+RewriteRule unused_tickets/(.*)$ /bus_tickets/BusPhone.php?request=get_unused_tickets&email=$1 [QSA,NC,L]
+RewriteRule used_tickets/(.*)$ /bus_tickets/BusPhone.php?request=get_used_tickets&email=$1 [QSA,NC,L]
+RewriteRule user_tickets/(.*)$ /bus_tickets/BusPhone.php?request=get_user_tickets&email=$1 [QSA,NC,L]
+RewriteRule user/(.*)$ /bus_tickets/BusPhone.php?request=user&email=$1 [QSA,NC,L]
+</IfModule>
